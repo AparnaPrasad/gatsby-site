@@ -29,7 +29,6 @@ const intro = () => {
                 <Typography variant={"body1"} key={'intro2'} className={styles.intro}>
                         I have 4+ years of experience developing web applications.
                 </Typography>
-        <Image/>
                 <ul className={`${introStyles.boxArea}`}>
                     <li></li>
                     <li></li>
