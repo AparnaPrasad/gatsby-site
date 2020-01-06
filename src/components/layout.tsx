@@ -1,10 +1,10 @@
 import React from "react"
-import { tabItems } from "../constants"
+//import { tabItems } from "../constants"
 import Container from "@material-ui/core/Container"
 import AppbarContainer from './appbarContainer';
-import { ThemeProvider, createMuiTheme, createPalette, Theme, makeStyles, createStyles } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
-import createTypography from "@material-ui/core/styles/createTypography";
+import { ThemeProvider, createMuiTheme, Theme, makeStyles, createStyles } from '@material-ui/core/styles';
+//import blue from '@material-ui/core/colors/blue';
+//import createTypography from "@material-ui/core/styles/createTypography";
 
 //import { Link } from "gatsby"
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
 
 const theme = createMuiTheme({
     palette: {
-        primary: blue
+        primary: { 500: '#8500ff' }
     },
     typography: {
         fontFamily: "Open Sans"
@@ -26,17 +26,19 @@ const useStyles = makeStyles((theme: Theme) =>
         appContainer: {
             display: 'flex',
             flexDirection: 'column',
-            height: '100vh',
-            overflow: 'auto'
+            //maxWidth: '100vw'
+            //height: '100vh',
+            //overflow: 'auto'
         },
         appHeader: {
             //flexShrink:0
         },
         appContent: {
             flexGrow: 1,
+            //marginBottom: '50px'
             //overflow: 'auto'
         }
-
+        
     })
 );
 

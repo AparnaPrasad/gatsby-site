@@ -1,45 +1,24 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Grid, Typography } from "@material-ui/core"
-
+//import { Grid, Typography } from "@material-ui/core"
+import Skills from '../components/skills2';
+import Intro from '../components/intro';
+import Experience from '../components/experience';
+import Projects from '../components/projects';
+import Contact from '../components/contact';
+import Separator from '../components/Separator';
 const IndexPage = () => (
-    
     <Layout>
-            <Grid
-            container
-            spacing={0}
-            direction="column"
-            alignItems="center"
-            justify="center"
-            style={{ display: "flex", height: "100%" }}
-        >
-                <Typography variant={"h5"}>
-                    Hi, I am Aparna. I am a full stack web developer
-                </Typography>
-                <Typography variant={"body1"}>
-                    I have 4+ years of experience developing web applications.
-                </Typography>
-               
-        </Grid>
-
-        <Grid
-            container
-            spacing={0}
-            direction="column"
-            alignItems="center"
-            justify="center"
-            style={{ display: "flex", height: "100%" }}
-        >
-            <Typography variant={"h5"}>
-                Hi, I am Aparna. I am a full stack web developer
-                </Typography>
-            <Typography variant={"body1"}>
-                I have 4+ years of experience developing web applications.
-                </Typography>
-
-        </Grid>
+        <Intro />
+        <Separator name={"skills"}/>
+        <Skills />
+        <Separator name={"education & experience"} />
+        <Experience />
+        <Separator name={"projects"} />
+        <Projects />
+        <Separator name={"contact"} />
+        <Contact/>
     </Layout>
-   
 )
 
 export default IndexPage

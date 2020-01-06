@@ -1,0 +1,71 @@
+.animationContainer {
+    //color: red;
+}
+
+.boxArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.boxArea li {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    display: block;
+    list-style: none;
+    //background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    //background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    //background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    //border: 4px solid red;
+    //background: red;
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+
+.boxArea li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    //background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+.boxArea li:nth-child(2) {
+    left: 12%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 2.5s;
+    //background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.boxArea li:nth-child(3) {
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 5s;
+}
+
+
+.boxArea li:nth-child(4) {
+    left: 55%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1s;
+}
+
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}

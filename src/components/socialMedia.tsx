@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton, makeStyles, createStyles, Theme, Avatar } from "@material-ui/core";
-import { GitHub, LinkedIn, Twitter, AccountCircle } from "@material-ui/icons";
+import { GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 import { useStaticQuery, graphql } from "gatsby";
 
 
@@ -45,7 +45,7 @@ const SocialMedia = () => {
 
     
     const metadata = socialMediaProps?.site?.siteMetadata;
-    const menuId = 'primary-search-account-menu';
+    //const menuId = 'primary-search-account-menu';
     console.log("socialMediaProps", socialMediaProps);
     if (metadata) {
         const { githublink, linkedInLink, twitterLink } = metadata;

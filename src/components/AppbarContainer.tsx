@@ -1,21 +1,14 @@
-import React, { useEffect } from 'react';
-import { fade, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import React /*{ useEffect }*/ from 'react';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
+//import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import { Home, ContactMail, Work, Brush, Web } from '@material-ui/icons';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import { Tabs, Tab, Icon, IconProps, useScrollTrigger, CssBaseline } from '@material-ui/core';
-import { tabItems, menuIconName } from '../constants';
+//import MenuItem from '@material-ui/core/MenuItem';
+//import Menu from '@material-ui/core/Menu';
+//import { Home, ContactMail, Work, Brush, Web } from '@material-ui/icons';
+import { useScrollTrigger, CssBaseline } from '@material-ui/core';
+//import {/* tabItems,*/ menuIconName } from '../constants';
 import { Link } from "gatsby";
 import SocialMedia from './socialMedia';
 //import appbarStyles from './appbar.module.scss';
@@ -70,80 +63,80 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function PrimarySearchAppBar() {
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
+    //const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    //const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
     
-    const isMenuOpen = Boolean(anchorEl);
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    //const isMenuOpen = Boolean(anchorEl);
+    //const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    const handleMobileMenuClose = () => {
-        setMobileMoreAnchorEl(null);
-    };
+    //const handleMobileMenuClose = () => {
+    //    setMobileMoreAnchorEl(null);
+    //};
 
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-        handleMobileMenuClose();
-    };
+    //const handleMenuClose = () => {
+    //    setAnchorEl(null);
+    //    handleMobileMenuClose();
+    //};
 
-    const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-        setMobileMoreAnchorEl(event.currentTarget);
-    };
+    //const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    //    setMobileMoreAnchorEl(event.currentTarget);
+    //};
 
-    useEffect(() => {
-        //console.log("location change!!", location);
-        setTabValue(tabItems.findIndex((tab) => (tab.link === location.pathname)));
-    }, [location])
+    //useEffect(() => {
+    //    //console.log("location change!!", location);
+    //    setTabValue(tabItems.findIndex((tab) => (tab.link === location.pathname)));
+    //}, [location])
     
-    const getMenuIcon = (iconName: menuIconName) => {
-        switch (iconName) {
-            case menuIconName.CONTACT:
-                return <ContactMail />
-            case menuIconName.EXPERIENCE:
-                return <Work />
-            case menuIconName.HOME:
-                return <Home />
-            case menuIconName.PROJECTS:
-                return <Web />
-            case menuIconName.SKILLS:
-                return <Brush />
-        }
-    }
+    //const getMenuIcon = (iconName: menuIconName) => {
+    //    switch (iconName) {
+    //        case menuIconName.CONTACT:
+    //            return <ContactMail />
+    //        case menuIconName.EXPERIENCE:
+    //            return <Work />
+    //        case menuIconName.HOME:
+    //            return <Home />
+    //        case menuIconName.PROJECTS:
+    //            return <Web />
+    //        case menuIconName.SKILLS:
+    //            return <Brush />
+    //    }
+    //}
 
-    const mobileMenuId = 'primary-search-account-menu-mobile';
-    const renderMobileMenu = (
+    //const mobileMenuId = 'primary-search-account-menu-mobile';
+    //const renderMobileMenu = (
         
-        <Menu
-            anchorEl={mobileMoreAnchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-            id={mobileMenuId}
-            keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-            open={isMobileMenuOpen}
-            onClose={handleMobileMenuClose}
-        >
-            {tabItems.map((tabItem, index) => (
-                <Link to={tabItem.link} key={index} className={classes.mobileMenuLinkStyle} activeClassName={classes.mobileMenuActive}>
-                    <MenuItem selected={index === tabValue}>
-                        <IconButton aria-label={tabItem.name} color="inherit" >
-                            {getMenuIcon(tabItem.iconName)}
-                        </IconButton>
-                        <p>{tabItem.name}</p>
-                    </MenuItem>
-            </Link>))}
-            </Menu>
+    //    <Menu
+    //        anchorEl={mobileMoreAnchorEl}
+    //        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+    //        id={mobileMenuId}
+    //        keepMounted
+    //        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+    //        open={isMobileMenuOpen}
+    //        onClose={handleMobileMenuClose}
+    //    >
+    //        {tabItems.map((tabItem, index) => (
+    //            <Link to={tabItem.link} key={index} className={classes.mobileMenuLinkStyle} activeClassName={classes.mobileMenuActive}>
+    //                <MenuItem selected={index === tabValue}>
+    //                    <IconButton aria-label={tabItem.name} color="inherit" >
+    //                        {getMenuIcon(tabItem.iconName)}
+    //                    </IconButton>
+    //                    <p>{tabItem.name}</p>
+    //                </MenuItem>
+    //        </Link>))}
+    //        </Menu>
        
-    );
+    //);
 
-    function a11yProps(index: any) {
-        return {
-            id: `simple-tab-${index}`,
-            'aria-controls': `simple-tabpanel-${index}`,
-        };
-    }
+    //function a11yProps(index: any) {
+    //    return {
+    //        id: `simple-tab-${index}`,
+    //        'aria-controls': `simple-tabpanel-${index}`,
+    //    };
+    //}
 
     
 
-    const [tabValue, setTabValue] = React.useState(0);
+    //const [tabValue, setTabValue] = React.useState(0);
 
    
 
@@ -161,15 +154,15 @@ export default function PrimarySearchAppBar() {
                         </Typography>
 
                         <div className={classes.grow} />
-                        <div className={classes.sectionDesktop}>
-                            <Tabs value={tabValue} /*onChange={handleTabChange}*/ aria-label="simple tabs example">
+                        {/*<div className={classes.sectionDesktop}>
+                            <Tabs value={tabValue}  aria-label="simple tabs example">
                                 {tabItems.map((tab, index) => (
                                     <Tab key={index} {...a11yProps(index)} label={tab.name} component={Link} to={tab.link} />                              
                                 ))}
                             </Tabs>
-                        </div>
+                        </div>*/}
                         <SocialMedia />
-                        <div className={classes.sectionMobile}>
+                        {/*<div className={classes.sectionMobile}>
                        
                             <IconButton
                                 aria-label="show more"
@@ -180,13 +173,13 @@ export default function PrimarySearchAppBar() {
                             >
                                 <MoreIcon />
                             </IconButton>
-                            </div>
+                            </div>*/}
                     
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
             <Toolbar />  
-            {renderMobileMenu}
+            {/*renderMobileMenu*/}
                 
             
         </div>
