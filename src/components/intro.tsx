@@ -27,7 +27,7 @@ const intro = () => {
                     Hi, I am Aparna. I am a full stack web developer
                 </Typography>
                 <Typography variant={"body1"} key={'intro2'} className={styles.intro}>
-                        I have 4+ years of experience developing web applications.
+                    I have 5 years of experience developing web applications.
                 </Typography>
                 <ul className={`${introStyles.boxArea}`}>
                     <li></li>

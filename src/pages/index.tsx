@@ -16,8 +16,8 @@ const IndexPage = () => (
         <Experience />
         <Separator name={"projects"} />
         <Projects />
-        <Separator name={"contact"} />
-        <Contact/>
+        {/*<Separator />
+        <Contact/>*/}
     </Layout>
 )
 
